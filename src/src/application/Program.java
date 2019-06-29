@@ -1,5 +1,7 @@
 
-package application;
+package src.application;
+
+import src.tabuleiro.Posicao;
 
 /**
  *Classe para...
@@ -8,7 +10,7 @@ package application;
  */
 public class Program {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Posicao p = new Posicao(3,5);
     }
     
 }//fim da classe

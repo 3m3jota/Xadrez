@@ -1,6 +1,6 @@
 
 
-package tabuleiro;
+package src.tabuleiro;
 
 /**
  *Classe para...
