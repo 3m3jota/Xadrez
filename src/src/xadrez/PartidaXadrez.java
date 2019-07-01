@@ -1,7 +1,10 @@
 
 package src.xadrez;
 
+import src.tabuleiro.Posicao;
 import src.tabuleiro.Tabuleiro;
+import src.xadrez.peças.Rei;
+import src.xadrez.peças.Torre;
 
 /**
  *Classe para...
@@ -13,6 +16,7 @@ public class PartidaXadrez {
 
     public PartidaXadrez(){
         tabuleiro = new Tabuleiro(8,8);
+        setupInicial();
     }
     
     public PeçaXadrez[][] getPeças(){
@@ -24,6 +28,11 @@ public class PartidaXadrez {
              
         }
         return mat;
+    }
+    private void setupInicial(){
+        tabuleiro.posicaoPeça(new Torre(tabuleiro,Cor.BRANCO), new Posicao(2,1));
+        tabuleiro.posicaoPeça(new Rei(tabuleiro,Cor.PRETO), new Posicao(0,4));
+        tabuleiro.posicaoPeça(new Rei(tabuleiro,Cor.BRANCO), new Posicao(7,4));
     }
        
 }//fim da classe

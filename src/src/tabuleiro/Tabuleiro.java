@@ -40,10 +40,12 @@ private Peça[][] peças;
     public Peça peça(Posicao posicao){
         return peças[posicao.getLinha()][posicao.getColuna()];
     }
-    /*
+   
     public void posicaoPeça(Peça peça, Posicao posicao){
+        peças[posicao.getLinha()][posicao.getColuna()] = peça;
+        peça.posicao = posicao;
     }
-    
+     /*
     public Peça removerPeça(Posicao posicao){
     }
     
