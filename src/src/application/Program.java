@@ -1,7 +1,8 @@
 
 package src.application;
 
-import src.tabuleiro.Posicao;
+import src.tabuleiro.Tabuleiro;
+import src.xadrez.PartidaXadrez;
 
 /**
  *Classe para...
@@ -10,8 +11,9 @@ import src.tabuleiro.Posicao;
  */
 public class Program {
     public static void main(String[] args) {
-        Posicao p = new Posicao(3,5);
-        System.out.println(p);
+       PartidaXadrez partida = new PartidaXadrez();
+       UI.imprimeTabuleiro(partida.getPeças());
+        
     }
     
 }//fim da classe

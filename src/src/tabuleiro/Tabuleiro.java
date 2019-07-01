@@ -32,13 +32,15 @@ private Peça[][] peças;
     public void setColuna(int coluna) {
         this.coluna = coluna;
     }
-    /*
+   
     public Peça peça(int linha,int coluna){
+        return peças[linha][coluna];
     }
-    
+     
     public Peça peça(Posicao posicao){
+        return peças[posicao.getLinha()][posicao.getColuna()];
     }
-    
+    /*
     public void posicaoPeça(Peça peça, Posicao posicao){
     }
     
