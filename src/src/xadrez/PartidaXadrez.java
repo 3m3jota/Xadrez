@@ -1,7 +1,7 @@
 
 package src.xadrez;
 
-import src.tabuleiro.Posicao;
+
 import src.tabuleiro.Tabuleiro;
 import src.xadrez.peças.Rei;
 import src.xadrez.peças.Torre;
@@ -29,10 +29,13 @@ public class PartidaXadrez {
         }
         return mat;
     }
+    private void localNovaPeca(char coluna, int linha, PeçaXadrez peça){
+        tabuleiro.posicaoPeça(peça, new PosicaoXadrez(coluna,linha).toPostion());
+    }
     private void setupInicial(){
-        tabuleiro.posicaoPeça(new Torre(tabuleiro,Cor.BRANCO), new Posicao(2,1));
-        tabuleiro.posicaoPeça(new Rei(tabuleiro,Cor.PRETO), new Posicao(0,4));
-        tabuleiro.posicaoPeça(new Rei(tabuleiro,Cor.BRANCO), new Posicao(7,4));
+        localNovaPeca('b', 6, new Torre(tabuleiro,Cor.BRANCO));
+        localNovaPeca('e', 8, new Rei(tabuleiro,Cor.PRETO));
+        localNovaPeca('e', 1, new Rei(tabuleiro,Cor.BRANCO));
     }
        
 }//fim da classe
